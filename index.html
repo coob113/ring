@@ -7,14 +7,11 @@
   <a-scene embedded arjs>
    
     <a-assets>
-        <a-asset-item id="ring" src="https://raw.githubusercontent.com/coob113/ring/master/ring_model2/scene.gltf"></a-asset-item>
+       <a-asset-item id="ring-obj" src="https://raw.githubusercontent.com/coob113/ring/master/ring_model3/RhinoExporter.obj"></a-asset-item>
+       <a-asset-item id="ring-mtl" src="https://raw.githubusercontent.com/coob113/ring/master/ring_model3/RhinoExporter.mtl"></a-asset-item>
     </a-assets>
         
-    <a-entity gltf-model-next="#ring"
-        scale="0.001 0.001 0.001"
-        position="-1.5 0 0"
-        rotation="0 0 0" >
-    </a-entity>
+    <a-entity obj-model="obj: #ring-obj; mtl: #ring-mtl"></a-entity>
 
     <a-marker-camera preset="hiro"></a-marker-camera>
   </a-scene>
